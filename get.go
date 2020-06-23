@@ -9,6 +9,7 @@ import (
 	"os"
 	"os/exec"
 	"strconv"
+	"time"
 )
 
 type total struct {
@@ -63,6 +64,7 @@ func reader(file string) [][]string {
 func main() {
 	// resp, _ := http.Get("https://api.rootnet.in/covid19-in/stats/latest")
 
+	today := time.Now().Format("2006-01-02")
 	// change the colorscheme for the ouput by uncommenting the required lines
 	colorReset := "\033[0m"
 	// colorRed    := "\033[31m"
@@ -157,7 +159,7 @@ func main() {
 	// adding date and details to csv file
 	var rows [][]string
 	var rowo []string
-	rowo = append(rowo, bod.LastRefreshed[:10], bod.LastRefreshed[11:19], "", "", "")
+	rowo = append(rowo, today, bod.LastRefreshed[:10], bod.LastRefreshed[11:19], "", "")
 	rows = append(rows, rowo)
 	var rowc []string
 	rowc = append(rowc, "India", strconv.Itoa(bod.Data.Total.Active), strconv.Itoa(bod.Data.Total.Confirmed), strconv.Itoa(bod.Data.Total.Deaths), strconv.Itoa(bod.Data.Total.Recovered))
