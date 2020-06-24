@@ -4,7 +4,7 @@ The coolest terminal application for corona stats (Corona Term).
 
 ## Installation
 1. Install Go
-2. Install figlet:
+2. Install figlet (for the fancy heading):
     - Ubuntu - `sudo apt-get install figlet`
     - Manjaro/Arch - `sudo pacman -S figlet`
 3. `go run get.go`
