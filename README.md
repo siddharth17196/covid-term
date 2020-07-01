@@ -16,5 +16,7 @@ example everytime it is run.\
 ## Screenshot
 ![Cterm](./images/cterm2.png)
 
+#### Works on Windows(terminal/cmd) as well without the fancy heading 
+
 
 
